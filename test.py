@@ -14,9 +14,8 @@ imgSize = 300
 # folder = "Data/C"
 # counter = 0
 
-labels = ["right_0", "right_1", "right_2", "right_3", "right_4", "right_5", "right_6", "right_7", "right_8", "right_9", "right_A", "right_B", "right_C", "right_D", "right_E", "right_F", "right_G", "right_H", "right_I", "right_J", "right_K", "right_L", "right_M", "right_N", "right_O", "right_P", "right_Q", 
-          "right_R", "right_S", "right_T", "right_U", "right_V", "right_W", "right_X", "right_Y", "right_Z", "left_0", "left_1", "left_2", "left_3", "left_4", "left_5", "left_6", "left_7", "left_8", "left_9", "left_A", "left_B", "left_C", "left_D", "left_E", "left_F", "left_G", "left_H", 
-          "left_I", "left_J", "left_K", "left_L", "left_M", "left_N", "left_O", "left_P", "left_Q", "left_R", "left_S", "left_T", "left_U", "left_V", "left_W", "left_X", "left_Y", "left_Z"]
+labels = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+          , "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 while True:
     success, img = cap.read()
@@ -58,8 +57,8 @@ while True:
         cv2.rectangle(imgOutput, (x-offset, y-offset),
                       (x + w+offset, y + h+offset), (255, 0, 255), 4)
 
-        # cv2.imshow("ImageCrop", imgCrop)
-        # cv2.imshow("ImageWhite", imgWhite)
+        cv2.imshow("ImageCrop", imgCrop)
+        cv2.imshow("ImageWhite", imgWhite)
 
     cv2.imshow("Image", imgOutput)
     key = cv2.waitKey(1)
