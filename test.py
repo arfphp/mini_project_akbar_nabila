@@ -9,7 +9,7 @@ import time
 # Inisialisasi koneksi ke Wemos D1 Mini melalui protokol Firmata
 board = pyfirmata.Arduino("COM5")  # Ganti "COM5" dengan port USB Wemos D1 Mini Anda
 led1 = board.get_pin('d:3:o')  # LED 1 terhubung ke pin D3
-led2 = board.get_pin('d:4:o')  # LED 2 terhubung ke pin D4
+led2 = board.get_pin('d:5:o')  # LED 2 terhubung ke pin D5
 
 cap = cv2.VideoCapture(0)
 detector = HandDetector(maxHands=2)
